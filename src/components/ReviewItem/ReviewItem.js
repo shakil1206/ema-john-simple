@@ -1,0 +1,28 @@
+import React from 'react';
+
+const ReviewItem = (props) => {
+    
+    const {name, quantity, key,price} = props.product;
+
+    return (
+        <div style={{
+            borderBottom:'1px solid lightgray',
+            marginBottom:'5px',
+            paddingBottom:'5px',
+            marginLeft:'200px',
+            marginRight:'200px'
+            
+        }} className="review-item">
+            <h4>{name}</h4>
+            <p>Quantity: {quantity}</p>
+            <p><small>${price}</small></p>
+            <br/>
+            <button 
+                className="main-button"
+                onClick={()=>props.removeProduct(key)}
+                >Remove</button>
+        </div>
+    );
+};
+
+export default ReviewItem;
