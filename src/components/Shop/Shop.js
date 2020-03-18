@@ -4,6 +4,7 @@ import './Shop.css';
 import Product from '../Poduct/Product';
 import Cart from '../Cart/Cart';
 import { addToDatabaseCart, getDatabaseCart } from '../../utilities/databaseManager';
+import { Link } from 'react-router-dom';
 
 
 const Shop = () => {
@@ -59,7 +60,9 @@ const handleAddProduct= (product)=>{
                 }
             </div>
             <div className="cart-container">
-                <Cart cart={cart}></Cart>
+                <Cart cart={cart}>
+                <Link to="/review"><button className="main-button">Review Order</button></Link>
+                </Cart>
             </div>
         </div>
     );
