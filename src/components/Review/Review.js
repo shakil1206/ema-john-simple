@@ -22,7 +22,7 @@ const Review = () => {
         //Cart
         const savedCart = getDatabaseCart();
         const productKeys = Object.keys(savedCart);
-        fetch("http://localhost:4200/getProductsByKey", {
+        fetch("https://boiling-tor-50537.herokuapp.com/getProductsByKey", {
             method:'POST',
             headers:{
                 'Content-Type': 'application/json'

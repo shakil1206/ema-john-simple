@@ -14,7 +14,7 @@ const Shop = () => {
 
     useEffect(() => {
 
-        fetch('http://localhost:4200/products')
+        fetch('https://boiling-tor-50537.herokuapp.com/products')
             .then(res => res.json())
             .then(data => {
                 setProducts(data);
